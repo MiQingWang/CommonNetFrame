@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation rootProject.ext.dependencies["appcompat"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["test_junit"]
+    androidTestImplementation rootProject.ext.dependencies["test_espresso"]
+
+    api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["retrofit-converter-gson"]
+    api rootProject.ext.dependencies["retrofit-converter-scalars"]
+    api rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+
+    api rootProject.ext.dependencies["okhttp4"]
+    api rootProject.ext.dependencies["logging-interceptor"]
+
+    api rootProject.ext.dependencies["rxandroid2"]
+    api rootProject.ext.dependencies["rxjava2"]
+
+    api rootProject.ext.dependencies["rxlifecycle2"]
+    api rootProject.ext.dependencies["rxlifecycle2-android"]
+    api rootProject.ext.dependencies["rxlifecycle2-components"]
+
+    api rootProject.ext.dependencies["autodispose2"]
+    api rootProject.ext.dependencies["autodispose2-androidx-lifecycle"]
+
+    api rootProject.ext.dependencies["rxcache2"]
+    api rootProject.ext.dependencies["rxcache-jolyglot-gson"]
+    api rootProject.ext.dependencies["rxpermissions2"]
+    api rootProject.ext.dependencies["rxerrorhandler2"]
+
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["fastjson"]
+
+}

@@ -1,0 +1,3 @@
+include ':common-net-frame'
+include ':app'
+rootProject.name = "CommonNetFrame"
