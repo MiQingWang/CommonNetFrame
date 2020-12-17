@@ -49,9 +49,10 @@ dependencies {
     api rootProject.ext.dependencies["rxlifecycle2"]
     api rootProject.ext.dependencies["rxlifecycle2-android"]
     api rootProject.ext.dependencies["rxlifecycle2-components"]
+    api rootProject.ext.dependencies["rxlifecycle2-android-lifecycle"]
 
-    api rootProject.ext.dependencies["autodispose2"]
-    api rootProject.ext.dependencies["autodispose2-androidx-lifecycle"]
+    api rootProject.ext.dependencies["autodispose"]
+    api rootProject.ext.dependencies["autodispose-android-archcomponents"]
 
     api rootProject.ext.dependencies["rxcache2"]
     api rootProject.ext.dependencies["rxcache-jolyglot-gson"]
