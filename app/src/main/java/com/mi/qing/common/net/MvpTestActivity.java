@@ -1,11 +1,9 @@
 package com.mi.qing.common.net;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.alibaba.fastjson.JSON;
 import com.mi.qing.common.net.frame.base.BaseMvpActivity;
 import com.mi.qing.common.net.mvp.TestContract;
 import com.mi.qing.common.net.mvp.TestModel;

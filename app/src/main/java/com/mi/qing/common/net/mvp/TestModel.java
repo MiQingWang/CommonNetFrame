@@ -5,7 +5,7 @@ import com.mi.qing.common.net.source.impl.TestServiceImpl;
 
 import io.reactivex.Observable;
 
-public class TestModel implements TestContract.Model{
+public class TestModel implements TestContract.Model {
 
 
     @Override

@@ -3,8 +3,6 @@ package com.mi.qing.common.net.frame.base.mvp;
 import android.app.Service;
 import android.view.View;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.OnLifecycleEvent;
 
