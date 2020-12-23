@@ -1,10 +1,8 @@
 package com.mi.qing.common.net.frame.base.mvp;
 
-import android.app.Service;
-import android.view.View;
+import android.util.Log;
 
 import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.OnLifecycleEvent;
 
 import com.mi.qing.common.net.frame.util.RxLifecycleUtils;
 import com.uber.autodispose.AutoDisposeConverter;
@@ -62,23 +60,21 @@ public class BasePresenter<M extends IModel, V extends IView> implements IPresen
 
 
     /**
-     * 只有当 {@code mRootView} 不为 null, 并且 {@code mRootView} 实现了 {@link LifecycleOwner} 时, 此方法才会被调用
-     * 所以当您想在 {@link Service} 以及一些自定义 {@link View} 或自定义类中使用 {@code Presenter} 时
-     * 您也将不能继续使用 {@link OnLifecycleEvent} 绑定生命周期
+     * 只有 {@code IPresenter} 实现了 {@link LifecycleOwner} 时, 此方法才会被调用
      */
     @Override
     public void onCreate(@NotNull LifecycleOwner owner) {
+        Log.e("BasePresenter", "onCreate: LifecycleOwner " );
         this.lifecycleOwner = owner;
 
     }
 
     /**
-     * 只有当 {@code mRootView} 不为 null, 并且 {@code mRootView} 实现了 {@link LifecycleOwner} 时, 此方法才会被调用
-     * 所以当您想在 {@link Service} 以及一些自定义 {@link View} 或自定义类中使用 {@code Presenter} 时
-     * 您也将不能继续使用 {@link OnLifecycleEvent} 绑定生命周期
+     * 只有并且 {@code IPresenter} 实现了 {@link LifecycleOwner} 时, 此方法才会被调用
      */
     @Override
     public void onDestroy(@NotNull LifecycleOwner owner) {
+        Log.e("BasePresenter", "onDestroy: LifecycleOwner " );
         owner.getLifecycle().removeObserver(this);
     }
 

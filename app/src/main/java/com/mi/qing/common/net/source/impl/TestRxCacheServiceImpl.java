@@ -31,7 +31,7 @@ public class TestRxCacheServiceImpl extends BaseRxCacheServiceImpl<TestRxCacheCo
 
 
     @Override
-    public Observable<BaseApiResult<String>> getTop() {
+    public Observable<BaseApiResult<Object>> getTop() {
         return getApi().getTop(TestServiceImpl.getInstance().getTop()).compose(RxBus.ApplySchedulers());
     }
 }

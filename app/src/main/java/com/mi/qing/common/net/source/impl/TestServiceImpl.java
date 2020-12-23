@@ -29,7 +29,7 @@ public class TestServiceImpl extends BaseServiceImpl<TestController> implements 
 
 
     @Override
-    public Observable<BaseApiResult<String>> getTop() {
+    public Observable<BaseApiResult<Object>> getTop() {
         return getApi().getTop().compose(RxBus.ApplySchedulers());
     }
 }

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CommonNetFrame</string>
+    <string name="money_str">金额：</string>
+    <string name="default_nickName">默认昵称</string>
+    <string name="default_money">金额：0</string>
 </resources>

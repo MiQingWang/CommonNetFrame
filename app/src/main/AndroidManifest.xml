@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CommonNetFrame">
-        <activity android:name=".MvpTestActivity"></activity>
+        <activity android:name=".MvvmTestActivity"></activity>
+        <activity android:name=".MvpTestActivity" />
         <activity android:name=".RxLifecycleTestActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

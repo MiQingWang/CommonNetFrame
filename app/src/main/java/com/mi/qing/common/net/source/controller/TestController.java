@@ -9,8 +9,8 @@ import retrofit2.http.Headers;
 public interface TestController {
 
     @Headers({
-            "token:true"
+            "token:false"
     })
-    @GET("data/sk/101010100.html")
-    Observable<BaseApiResult<String>> getTop();
+    @GET("article/list/0/json")
+    Observable<BaseApiResult<Object>> getTop();
 }

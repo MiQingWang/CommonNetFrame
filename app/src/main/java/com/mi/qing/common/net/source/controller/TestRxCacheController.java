@@ -13,5 +13,5 @@ import retrofit2.http.Headers;
 public interface TestRxCacheController {
     @ProviderKey("app-net-top")
     @LifeCache(duration = 5, timeUnit = TimeUnit.MINUTES)   //缓存有效期5分钟
-    Observable<BaseApiResult<String>> getTop(Observable<BaseApiResult<String>> top);
+    Observable<BaseApiResult<Object>> getTop(Observable<BaseApiResult<Object>> top);
 }

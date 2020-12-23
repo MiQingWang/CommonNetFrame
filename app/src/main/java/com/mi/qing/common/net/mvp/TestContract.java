@@ -21,7 +21,7 @@ public interface TestContract {
     }
 
     interface Model extends IModel {
-        Observable<BaseApiResult<String>> getTop();
+        Observable<BaseApiResult<Object>> getTop();
     }
 
 }

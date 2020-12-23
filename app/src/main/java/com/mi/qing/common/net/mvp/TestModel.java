@@ -14,7 +14,7 @@ public class TestModel implements TestContract.Model {
     }
 
     @Override
-    public Observable<BaseApiResult<String>> getTop() {
+    public Observable<BaseApiResult<Object>> getTop() {
         return TestServiceImpl.getInstance().getTop();
     }
 }

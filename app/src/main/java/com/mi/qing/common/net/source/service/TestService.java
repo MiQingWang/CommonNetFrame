@@ -6,5 +6,5 @@ import io.reactivex.Observable;
 
 public interface TestService {
 
-    Observable<BaseApiResult<String>> getTop();
+    Observable<BaseApiResult<Object>> getTop();
 }

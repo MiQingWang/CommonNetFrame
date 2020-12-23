@@ -13,8 +13,8 @@ public class MyApplication extends Application {
         super.onCreate();
 
         new NetworkLoader.Build(this)
-                .setBaseUrl("http://www.weather.com.cn/","http://www.weather.com.cn/")
-                .setLogLevel(HttpLoggingInterceptor.Level.HEADERS)
+                .setBaseUrl("https://www.wanandroid.com/","https://www.wanandroid.com/")
+                .setLogLevel(HttpLoggingInterceptor.Level.NONE)
                 .setOpenCache(true)
                 .setOpenRxCache(true)
                 //自定义token设置

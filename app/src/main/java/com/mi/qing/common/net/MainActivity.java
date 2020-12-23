@@ -53,14 +53,23 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-        Intent intent = new Intent(this, MvpTestActivity.class);
+        Intent intent = new Intent(this,RxLifecycleTestActivity.class);
         startActivity(intent);
-
     }
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    public void clickMvp(View view) {
+        Intent intent = new Intent(this, MvpTestActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickMvvm(View view) {
+        Intent intent = new Intent(this, MvvmTestActivity.class);
+        startActivity(intent);
     }
 }
