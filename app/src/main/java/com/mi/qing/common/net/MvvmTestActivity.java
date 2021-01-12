@@ -2,8 +2,11 @@ package com.mi.qing.common.net;
 
 import android.view.View;
 
+import androidx.lifecycle.ViewModelProviders;
+
 import com.mi.qing.common.net.databinding.ActivityMvvmTestBinding;
 import com.mi.qing.common.net.frame.base.BaseMvvmActivity;
+import com.mi.qing.common.net.mvvm.AppViewModelFactory;
 import com.mi.qing.common.net.mvvm.TestModel;
 import com.mi.qing.common.net.mvvm.TestViewModel;
 import com.mi.qing.common.net.mvvm.User;
@@ -31,13 +34,13 @@ public class MvvmTestActivity extends BaseMvvmActivity<ActivityMvvmTestBinding, 
 
     @Override
     public TestViewModel initViewModel() {
-        TestModel testModel = new TestModel();
-        return new TestViewModel(getApplication(), testModel);
+        AppViewModelFactory factory = AppViewModelFactory.getInstance(getApplication(),new TestModel());
+        return ViewModelProviders.of(this, factory).get(TestViewModel.class);
     }
 
     @Override
     public void initViewObservable() {
-
+     mViewDataBinding.userName.setText("懂了不");
     }
 
     @Override

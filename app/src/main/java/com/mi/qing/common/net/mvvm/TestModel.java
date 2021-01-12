@@ -6,14 +6,10 @@ import com.mi.qing.common.net.source.impl.TestServiceImpl;
 
 import io.reactivex.Observable;
 
-public class TestModel implements IMVVMModel {
+public class TestModel extends BaseModel {
 
     public Observable<BaseApiResult<Object>> getTop() {
         return TestServiceImpl.getInstance().getTop();
     }
 
-    @Override
-    public void onDestroy() {
-
-    }
 }

@@ -5,11 +5,13 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableField;
+import androidx.lifecycle.MutableLiveData;
 
 import com.alibaba.fastjson.JSON;
 import com.mi.qing.common.net.frame.base.binding.command.BindingAction;
 import com.mi.qing.common.net.frame.base.binding.command.BindingCommand;
 import com.mi.qing.common.net.frame.base.mvvm.BaseViewModel;
+import com.mi.qing.common.net.frame.base.mvvm.IMVVMModel;
 
 import java.util.Random;
 
@@ -17,10 +19,7 @@ public class TestViewModel extends BaseViewModel<TestModel> {
 
     //用户绑定
     public ObservableField<User> userObservableField = new ObservableField<>();
-
-    public TestViewModel(@NonNull Application application) {
-        super(application);
-    }
+    private MutableLiveData<User> mUser = new MutableLiveData<>();
 
     public TestViewModel(@NonNull Application application, TestModel model) {
         super(application, model);
@@ -42,6 +41,11 @@ public class TestViewModel extends BaseViewModel<TestModel> {
             updateUser();
         }
     });
+
+
+    public MutableLiveData<User> getMUser() {
+        return mUser;
+    }
 
 
     public void loginUser(){
